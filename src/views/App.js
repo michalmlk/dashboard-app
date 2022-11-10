@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router } from 'react-router-dom';
+import Layout from '../components/organisms/Sidebar/Sidebar';
 import Topbar from '../components/organisms/Topbar/Topbar';
 import MainTemplate from '../components/templates/MainTemplate/MainTemplate';
 import { GlobalStyle } from '../assets/styles/GlobalStyle';
@@ -14,6 +15,7 @@ function App() {
         <MainTemplate>
           <Topbar />
           <Wrapper>
+            <Layout />
             <h1>Welcome back! dasd as</h1>
           </Wrapper>
         </MainTemplate>

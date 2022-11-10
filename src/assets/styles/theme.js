@@ -5,6 +5,8 @@ const theme = {
     dark: '#111536',
     light: '#d4d9fa',
     background: '#191c33',
+    lightGrey: '#aaaa',
+    buttons: '#ddd',
   },
 };
 export default theme;
