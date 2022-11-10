@@ -21,6 +21,7 @@ module.exports = {
       {
         singleQuote: true,
         jsxSingleQuote: true,
+        endOfLine: 'auto',
       },
     ],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
@@ -34,5 +35,7 @@ module.exports = {
       },
     ],
     'jsx-quotes': ['error', 'prefer-single'],
+    'import/prefer-default-export': 0,
+    'react/prop-types': 'off',
   },
 };
