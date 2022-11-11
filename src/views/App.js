@@ -5,6 +5,7 @@ import MainTemplate from '../components/templates/MainTemplate/MainTemplate';
 import { GlobalStyle } from '../assets/styles/GlobalStyle';
 import theme from '../assets/styles/theme';
 import { Wrapper } from './App.styles';
+import Team from './Team/Team';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
             <Wrapper>
               <Routes>
                 <Route path='/' element={<h1>dsads</h1>} />
-                <Route path='/team' element={<h1>team</h1>} />
+                <Route path='/team' element={<Team />} />
                 <Route path='/' element={<h1>dsads</h1>} />
                 <Route path='/' element={<h1>dsads</h1>} />
               </Routes>

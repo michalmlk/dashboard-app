@@ -1,6 +1,4 @@
 import * as React from 'react';
 
-const Dashboard = () => {
-    
-};
+const Dashboard = () => {};
 export default Dashboard;
