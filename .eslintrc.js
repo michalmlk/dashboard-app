@@ -34,6 +34,7 @@ module.exports = {
         variables: true,
       },
     ],
+    'global-require': 0,
     'jsx-quotes': ['error', 'prefer-single'],
     'import/prefer-default-export': 0,
     'react/prop-types': 'off',

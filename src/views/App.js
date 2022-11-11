@@ -1,7 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Layout from '../components/organisms/Sidebar/Sidebar';
-import Topbar from '../components/organisms/Topbar/Topbar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MainTemplate from '../components/templates/MainTemplate/MainTemplate';
 import { GlobalStyle } from '../assets/styles/GlobalStyle';
 import theme from '../assets/styles/theme';
@@ -13,10 +11,13 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <MainTemplate>
-          <Topbar />
           <Wrapper>
-            <Layout />
-            <h1>Welcome back! dasd as</h1>
+            <Routes>
+              <Route path='/' element={<h1>dsads</h1>} />
+              <Route path='/team' element={<h1>team</h1>} />
+              <Route path='/' element={<h1>dsads</h1>} />
+              <Route path='/' element={<h1>dsads</h1>} />
+            </Routes>
           </Wrapper>
         </MainTemplate>
       </ThemeProvider>

@@ -7,4 +7,6 @@ export const TopbarWrapper = styled.div`
   padding: 0 25px;
   background-color: ${({ theme }) => theme.colors.dark};
   height: 60px;
+  grid-row: 1 / 2;
+  grid-column: 2 / 2;
 `;
