@@ -38,5 +38,7 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-single'],
     'import/prefer-default-export': 0,
     'react/prop-types': 'off',
+    'react/function-component-definition': 1,
+    'react/jsx-no-constructed-context-values': 0,
   },
 };
