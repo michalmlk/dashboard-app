@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.nav`
   width: ${({ isCollapsed }) => (isCollapsed ? '70px' : '100%')};
@@ -27,26 +26,5 @@ export const Wrapper = styled.nav`
     &:hover {
       color: ${({ theme }) => theme.colors.primary};
     }
-  }
-`;
-
-const activeclassname = 'active';
-export const StyledLink = styled(NavLink).attrs({ activeclassname })`
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.lightGrey};
-  text-align: left;
-  margin: 15px auto 15px 20px;
-  position: relative;
-  font-size: ${({ iscollapsed }) => (!iscollapsed ? '16px' : '0')};
-  gap: 0.5rem;
-  transition: 0.2s ease;
-
-  &.${activeclassname} {
-    color: ${({ theme }) => theme.colors.primary};
-  }
-  &:hover {
-    color: ${({ theme }) => theme.colors.primary};
   }
 `;

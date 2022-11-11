@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { NavigationContext } from '../../../providers/NavigationProvider';
-import { StyledLink, Wrapper } from './Navigation.styles';
+import { Wrapper } from './Navigation.styles';
 import User from '../../atoms/User/User';
-import '../../../assets/avatar.png';
+import NavItem from '../../atoms/NavItem/NavItem';
 import {
   DashboardOutlinedIcon,
   PersonAddAlt1OutlinedIcon,
@@ -21,30 +21,45 @@ function Navigation() {
         {isCollapsed ? <MenuOutlinedIcon /> : <CloseOutlinedIcon />}
       </button>
       <User isCollapsed={isCollapsed}>
-        <img src={require('../../../assets/avatar.png')} alt='ss' />
+        <img src={require('../../../assets/avatar.png')} alt='admin' />
         <h2>Los Mlk</h2>
-        <p>Your fav user</p>
+        <p>Your fav Admin</p>
       </User>
-      <StyledLink exact='true' to='/' iscollapsed={isCollapsed}>
-        <DashboardOutlinedIcon />
-        Dashboard
-      </StyledLink>
-      <StyledLink to='/team' iscollapsed={isCollapsed}>
-        <PeopleOutlinedIcon />
-        Team
-      </StyledLink>
-      <StyledLink to='/form' iscollapsed={isCollapsed}>
-        <PersonAddAlt1OutlinedIcon />
-        Add member
-      </StyledLink>
-      <StyledLink to='/bar' iscollapsed={isCollapsed}>
-        <BarChartOutlinedIcon />
-        Barchart
-      </StyledLink>
-      <StyledLink to='/pie' iscollapsed={isCollapsed}>
-        <PieChartOutlineOutlinedIcon />
-        Piechart
-      </StyledLink>
+      <NavItem
+        exact='true'
+        to='/'
+        isCollapsed={isCollapsed}
+        icon={<DashboardOutlinedIcon />}
+        name='Dashboard'
+      />
+      <NavItem
+        exact='true'
+        to='/team'
+        isCollapsed={isCollapsed}
+        icon={<PeopleOutlinedIcon />}
+        name='Team'
+      />
+      <NavItem
+        exact='true'
+        to='/form'
+        isCollapsed={isCollapsed}
+        icon={<PersonAddAlt1OutlinedIcon />}
+        name='Add member'
+      />
+      <NavItem
+        exact='true'
+        to='/bar'
+        isCollapsed={isCollapsed}
+        icon={<BarChartOutlinedIcon />}
+        name='Bar chart'
+      />
+      <NavItem
+        exact='true'
+        to='/pie'
+        isCollapsed={isCollapsed}
+        icon={<PieChartOutlineOutlinedIcon />}
+        name='Pie chart'
+      />
     </Wrapper>
   );
 }
