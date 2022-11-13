@@ -7,6 +7,8 @@ const theme = {
     background: '#060d17',
     lightGrey: '#aaaa',
     buttons: '#ddd',
+    contentOuter__dark: '#0b1026',
+    contentInner__dark: '#080b1a',
   },
 };
 export default theme;

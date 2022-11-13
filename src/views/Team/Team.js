@@ -1,10 +1,12 @@
 import { DataGrid } from '@mui/x-data-grid';
 import { Box, Typography } from '@mui/material';
+import { useContext } from 'react';
+import { DashboardContext } from '../../providers/DashboardProvider';
 import { ViewWrapper } from '../../components/molecules/ViewWrapper.styles';
-import { mockDataTeam } from '../../data/mockData';
 import Header from '../../components/molecules/Header/Header';
 
 function Team() {
+  const { users } = useContext(DashboardContext);
   const columns = [
     { field: 'id', headerName: 'ID' },
     {
@@ -43,10 +45,19 @@ function Team() {
             p='5px'
             display='flex'
             justifyContent='center'
-            backgroundColor={access === 'admin' ? 'red' : 'green'}
+            backgroundColor={() => {
+              if (access === 'admin') {
+                return '#1ced88';
+              }
+              if (access === 'manager') {
+                return '#1cabed';
+              }
+
+              return '#e5ff66';
+            }}
             borderRadius='4px'
           >
-            <Typography color='#ddd' sx={{ ml: '5px' }}>
+            <Typography color='#000' sx={{ ml: '5px' }}>
               {access}
             </Typography>
           </Box>
@@ -101,7 +112,7 @@ function Team() {
           },
         }}
       >
-        <DataGrid checkboxSelection rows={mockDataTeam} columns={columns} />
+        <DataGrid checkboxSelection rows={users} columns={columns} />
       </Box>
     </ViewWrapper>
   );

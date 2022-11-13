@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { NavigationContext } from '../../../providers/NavigationProvider';
+import { DashboardContext } from '../../../providers/DashboardProvider';
 import { Wrapper } from './Navigation.styles';
 import User from '../../atoms/User/User';
 import NavItem from '../../atoms/NavItem/NavItem';
@@ -14,7 +14,7 @@ import {
 } from '../../../assets/icons';
 
 function Navigation() {
-  const { isCollapsed, collapsedHandler } = useContext(NavigationContext);
+  const { isCollapsed, collapsedHandler } = useContext(DashboardContext);
   return (
     <Wrapper isCollapsed={isCollapsed}>
       <button type='button' onClick={collapsedHandler}>

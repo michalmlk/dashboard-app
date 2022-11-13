@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import { NavigationContext } from '../../../providers/NavigationProvider';
+import { DashboardContext } from '../../../providers/DashboardProvider';
 import Navigation from '../../organisms/Navigation/Navigation';
 import Topbar from '../../organisms/Topbar/Topbar';
 
@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
 `;
 
 function MainTemplate({ children }) {
-  const { isCollapsed } = useContext(NavigationContext);
+  const { isCollapsed } = useContext(DashboardContext);
   return (
     <Wrapper isCollapsed={isCollapsed}>
       <Navigation />
