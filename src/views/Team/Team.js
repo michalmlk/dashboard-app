@@ -1,9 +1,10 @@
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { Box, Typography } from '@mui/material';
 import { useContext } from 'react';
 import { DashboardContext } from '../../providers/DashboardProvider';
 import { ViewWrapper } from '../../components/molecules/ViewWrapper.styles';
 import Header from '../../components/molecules/Header/Header';
+import Button from '../../components/atoms/Button/Button';
 
 function Team() {
   const { users } = useContext(DashboardContext);
@@ -65,6 +66,7 @@ function Team() {
       },
     },
   ];
+
   return (
     <ViewWrapper>
       <Header title='Team' subtitle='Your Teammates' />
@@ -112,7 +114,15 @@ function Team() {
           },
         }}
       >
-        <DataGrid checkboxSelection rows={users} columns={columns} />
+        <DataGrid
+          checkboxSelection
+          rows={users}
+          columns={columns}
+          components={{ Toolbar: GridToolbar }}
+          componentsProps={{
+            toolbar: { csvOptions: { allColumns: true, fileName: 'Users' } },
+          }}
+        />
       </Box>
     </ViewWrapper>
   );

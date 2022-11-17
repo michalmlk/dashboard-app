@@ -1,7 +1,8 @@
 import { useContext } from 'react';
+import { useForm } from 'react-hook-form';
 import { ViewWrapper } from '../../components/molecules/ViewWrapper.styles';
 import { DashboardContext } from '../../providers/DashboardProvider';
-import { useForm } from '../../hooks/useForm';
+import { useForm as useFormHook } from '../../hooks/useForm';
 import { StyledForm } from './Form.styles';
 import Header from '../../components/molecules/Header/Header';
 
@@ -17,7 +18,8 @@ const initialFormState = {
 function Form() {
   const { addTeammateHandler } = useContext(DashboardContext);
   const { formValues, handleInputChange, handleClearForm } =
-    useForm(initialFormState);
+    useFormHook(initialFormState);
+  const { register, handleSubmit, formState } = useForm();
 
   const handleAddSubmit = (e) => {
     e.preventDefault();
@@ -27,9 +29,13 @@ function Form() {
 
   return (
     <ViewWrapper>
-      <Header title='Team' subtitle='Your Teammates' />
+      <Header title='Add member' subtitle='Add new teammate' />
       <StyledForm onSubmit={handleAddSubmit}>
         <input
+          {...register('firstName', {
+            required: true,
+            pattern: /^[A-Za-z]+$/i,
+          })}
           type='text'
           name='name'
           value={formValues.name}
@@ -37,13 +43,18 @@ function Form() {
           placeholder='Name'
         />
         <input
-          type='text'
+          {...register('age', { required: true, min: 18, max: 99 })}
+          type='number'
           name='age'
           value={formValues.age}
           onChange={handleInputChange}
           placeholder='Age'
         />
         <input
+          {...register('phone', {
+            required: true,
+            pattern: /[+][0-9]{2}[-s.][0-9]{3}[-s.][0-9]{3}[-s.][0-9]{3}$/,
+          })}
           type='text'
           name='phone'
           value={formValues.phone}
@@ -51,6 +62,7 @@ function Form() {
           placeholder='Phone number'
         />
         <input
+          {...register('email')}
           type='text'
           name='email'
           value={formValues.email}
@@ -58,6 +70,7 @@ function Form() {
           placeholder='Email'
         />
         <select
+          {...register('access')}
           name='access'
           id='access'
           value={formValues.access}

@@ -3,7 +3,7 @@ import { mockDataTeam } from '../data/mockData';
 
 export const DashboardContext = React.createContext({
   collapseHandler: () => {},
-  addUserHandler: () => {},
+  addTeammateHandler: () => {},
   users: [],
 });
 

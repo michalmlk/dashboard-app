@@ -4,7 +4,7 @@ import {
   ListAltOutlinedIcon,
   PeopleOutlinedIcon,
 } from '../../../assets/icons';
-import Buttons from '../../molecules/Buttons/Buttons';
+import { Buttons, StyledLink } from '../../molecules/Buttons/Buttons';
 import Searchbar from '../../molecules/Searchbar/Searchbar';
 import { TopbarWrapper } from './Topbar.styles';
 
@@ -13,18 +13,18 @@ function Topbar() {
     <TopbarWrapper>
       <Searchbar />
       <Buttons>
-        <button type='button'>
+        <StyledLink to='/settings'>
           <SettingsOutlinedIcon />
-        </button>
-        <button type='button'>
+        </StyledLink>
+        <StyledLink to='/profile'>
           <PersonOutlineIcon />
-        </button>
-        <button type='button'>
+        </StyledLink>
+        <StyledLink to='/tasks'>
           <ListAltOutlinedIcon />
-        </button>
-        <button type='button'>
+        </StyledLink>
+        <StyledLink to='/team'>
           <PeopleOutlinedIcon />
-        </button>
+        </StyledLink>
       </Buttons>
     </TopbarWrapper>
   );

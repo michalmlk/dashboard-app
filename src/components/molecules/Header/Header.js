@@ -19,13 +19,14 @@ const HeaderWrapper = styled.div`
   }
 `;
 
-function Header({ title, subtitle }) {
+function Header({ title, subtitle, children }) {
   return (
     <HeaderWrapper>
       <div>
         <h1>{title}</h1>
         <h4>{subtitle}</h4>
       </div>
+      {children}
     </HeaderWrapper>
   );
 }
