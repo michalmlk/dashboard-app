@@ -7,6 +7,7 @@ import theme from '../assets/styles/theme';
 import { Wrapper } from './App.styles';
 import Team from './Team/Team';
 import Form from './Form/Form';
+import Tasks from './Tasks/Tasks';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
                 <Route path='/' element={<h1>dsads</h1>} />
                 <Route path='/team' element={<Team />} />
                 <Route path='/form' element={<Form />} />
-                <Route path='/' element={<h1>dsads</h1>} />
+                <Route path='/pie' element={<h1>dasds</h1>} />
+                <Route path='/tasks' element={<Tasks />} />
               </Routes>
             </Wrapper>
           </MainTemplate>

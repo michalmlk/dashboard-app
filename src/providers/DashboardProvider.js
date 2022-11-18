@@ -5,6 +5,7 @@ export const DashboardContext = React.createContext({
   collapseHandler: () => {},
   addTeammateHandler: () => {},
   users: [],
+  tasks: [],
 });
 
 export function DashboardProvider({ children }) {
