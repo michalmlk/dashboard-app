@@ -8,6 +8,9 @@ import { Wrapper } from './App.styles';
 import Team from './Team/Team';
 import Form from './Form/Form';
 import Tasks from './Tasks/Tasks';
+import Profile from './Profile/Profile';
+import BarContainer from './Bar/Bar';
+import Assign from './Assign/Assign';
 
 function App() {
   return (
@@ -21,8 +24,10 @@ function App() {
                 <Route path='/' element={<h1>dsads</h1>} />
                 <Route path='/team' element={<Team />} />
                 <Route path='/form' element={<Form />} />
-                <Route path='/pie' element={<h1>dasds</h1>} />
+                <Route path='/bar' element={<BarContainer />} />
                 <Route path='/tasks' element={<Tasks />} />
+                <Route path='/profile' element={<Profile />} />
+                <Route path='/assign-task' element={<Assign />} />
               </Routes>
             </Wrapper>
           </MainTemplate>

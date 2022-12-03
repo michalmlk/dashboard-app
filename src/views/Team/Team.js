@@ -4,7 +4,6 @@ import { useContext } from 'react';
 import { DashboardContext } from '../../providers/DashboardProvider';
 import { ViewWrapper } from '../../components/molecules/ViewWrapper.styles';
 import Header from '../../components/molecules/Header/Header';
-import Button from '../../components/atoms/Button/Button';
 
 function Team() {
   const { users } = useContext(DashboardContext);

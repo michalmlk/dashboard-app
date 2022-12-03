@@ -7,14 +7,15 @@ import {
   DashboardOutlinedIcon,
   PersonAddAlt1OutlinedIcon,
   BarChartOutlinedIcon,
-  PieChartOutlineOutlinedIcon,
   PeopleOutlinedIcon,
   MenuOutlinedIcon,
   CloseOutlinedIcon,
+  AssignmentIcon,
 } from '../../../assets/icons';
 
 function Navigation() {
-  const { isCollapsed, collapsedHandler } = useContext(DashboardContext);
+  const { isCollapsed, collapsedHandler, adminData } =
+    useContext(DashboardContext);
   return (
     <Wrapper isCollapsed={isCollapsed}>
       <button type='button' onClick={collapsedHandler}>
@@ -22,8 +23,8 @@ function Navigation() {
       </button>
       <User isCollapsed={isCollapsed}>
         <img src={require('../../../assets/avatar.png')} alt='admin' />
-        <h2>Los Mlk</h2>
-        <p>Your fav Admin</p>
+        <h2>{adminData.name}</h2>
+        <p>{adminData.desc}</p>
       </User>
       <NavItem
         exact='true'
@@ -55,10 +56,10 @@ function Navigation() {
       />
       <NavItem
         exact='true'
-        to='/pie'
+        to='/assign-task'
         isCollapsed={isCollapsed}
-        icon={<PieChartOutlineOutlinedIcon />}
-        name='Pie chart'
+        icon={<AssignmentIcon />}
+        name='Assign task'
       />
     </Wrapper>
   );

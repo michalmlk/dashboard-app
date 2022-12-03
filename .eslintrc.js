@@ -24,7 +24,10 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+    ],
     'no-unused-vars': 'warn',
     'no-use-before-define': [
       'error',
@@ -41,5 +44,7 @@ module.exports = {
     'react/function-component-definition': 1,
     'react/jsx-no-constructed-context-values': 0,
     'react/jsx-props-no-spreading': 0,
+    'no-plusplus': 0,
+    'react/no-array-index-key': 0,
   },
 };

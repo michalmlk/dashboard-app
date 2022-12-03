@@ -2,31 +2,22 @@ import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { ViewWrapper } from '../../components/molecules/ViewWrapper.styles';
 import { DashboardContext } from '../../providers/DashboardProvider';
-import { useForm as useFormHook } from '../../hooks/useForm';
+import { useForm as useFormHook, initialFormState } from '../../hooks/useForm';
 import { StyledForm } from './Form.styles';
 import Header from '../../components/molecules/Header/Header';
-
-const initialFormState = {
-  id: '',
-  name: '',
-  age: '',
-  phone: '',
-  email: '',
-  access: '',
-};
 
 function Form() {
   const { addTeammateHandler } = useContext(DashboardContext);
   const { formValues, handleInputChange, handleClearForm } =
     useFormHook(initialFormState);
-  const { register, handleSubmit, formState } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const handleAddSubmit = (e) => {
     e.preventDefault();
+    handleSubmit(formValues);
     addTeammateHandler(formValues);
     handleClearForm();
   };
-
   return (
     <ViewWrapper>
       <Header title='Add member' subtitle='Add new teammate' />
@@ -43,7 +34,11 @@ function Form() {
           placeholder='Name'
         />
         <input
-          {...register('age', { required: true, min: 18, max: 99 })}
+          {...register('age', {
+            required: true,
+            min: 18,
+            max: 99,
+          })}
           type='number'
           name='age'
           value={formValues.age}
@@ -76,10 +71,10 @@ function Form() {
           value={formValues.access}
           onChange={handleInputChange}
         >
-          <option value='' selected>
+          <option value='' defaultValue>
             Select access level
           </option>
-          <option value='user' selected>
+          <option value='user' defaultValue>
             User
           </option>
           <option value='manager'>Manager</option>

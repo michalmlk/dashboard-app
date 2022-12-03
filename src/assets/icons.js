@@ -9,6 +9,7 @@ import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
 import PersonAddAlt1OutlinedIcon from '@mui/icons-material/PersonAddAlt1Outlined';
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
 import PieChartOutlineOutlinedIcon from '@mui/icons-material/PieChartOutlineOutlined';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 
 export {
   SettingsOutlinedIcon,
@@ -22,4 +23,5 @@ export {
   PersonAddAlt1OutlinedIcon,
   BarChartOutlinedIcon,
   PieChartOutlineOutlinedIcon,
+  AssignmentIcon,
 };

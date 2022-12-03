@@ -10,10 +10,10 @@ function TasksListItem({ user }) {
       <h2>{user.name}</h2>
       <p>Tasks</p>
       <Scrollbars>
-        {user.tasks.map((el) => (
-          <TaskDescription>
-            <p>{el.title}</p>
-            <p>completed: {el.completed ? 'yes' : 'no'}</p>
+        {user.tasks.map(({ title, completed, key }) => (
+          <TaskDescription key={key}>
+            <p>{title}</p>
+            <p>completed: {completed ? 'yes' : 'no'}</p>
           </TaskDescription>
         ))}
       </Scrollbars>

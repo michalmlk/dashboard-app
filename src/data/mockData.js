@@ -1,3 +1,5 @@
+import { v4 as uuidV4 } from 'uuid';
+
 export const mockDataTeam = [
   {
     id: 1,
@@ -7,15 +9,15 @@ export const mockDataTeam = [
     phone: '(665)121-5454',
     access: 'admin',
     tasks: [
-      { title: 'Setup workspace', completed: true },
-      { title: 'Change estimate', completed: false },
-      { title: 'Develop new widget', completed: true },
-      { title: 'Setup workspace', completed: true },
-      { title: 'Change estimate', completed: false },
-      { title: 'Develop new widget', completed: true },
-      { title: 'Setup workspace', completed: true },
-      { title: 'Change estimate', completed: false },
-      { title: 'Develop new widget', completed: true },
+      { title: 'Setup workspace', completed: true, key: uuidV4() },
+      { title: 'Change estimate', completed: false, key: uuidV4() },
+      { title: 'Develop new widget', completed: true, key: uuidV4() },
+      { title: 'Setup workspace', completed: true, key: uuidV4() },
+      { title: 'Change estimate', completed: false, key: uuidV4() },
+      { title: 'Develop new widget', completed: true, key: uuidV4() },
+      { title: 'Setup workspace', completed: true, key: uuidV4() },
+      { title: 'Change estimate', completed: false, key: uuidV4() },
+      { title: 'Develop new widget', completed: true, key: uuidV4() },
     ],
   },
   {
@@ -26,9 +28,9 @@ export const mockDataTeam = [
     phone: '(421)314-2288',
     access: 'manager',
     tasks: [
-      { title: 'Setup workspace', completed: true },
-      { title: 'Change estimate', completed: false },
-      { title: 'Develop new widget', completed: true },
+      { title: 'Setup workspace', completed: true, key: uuidV4() },
+      { title: 'Change estimate', completed: false, key: uuidV4() },
+      { title: 'Develop new widget', completed: true, key: uuidV4() },
     ],
   },
   {
@@ -39,9 +41,9 @@ export const mockDataTeam = [
     phone: '(422)982-6739',
     access: 'user',
     tasks: [
-      { title: 'Setup workspace', completed: true },
-      { title: 'Change estimate', completed: false },
-      { title: 'Develop new widget', completed: true },
+      { title: 'Setup workspace', completed: true, key: uuidV4() },
+      { title: 'Change estimate', completed: false, key: uuidV4() },
+      { title: 'Develop new widget', completed: true, key: uuidV4() },
     ],
   },
   {
@@ -52,9 +54,9 @@ export const mockDataTeam = [
     phone: '(921)425-6742',
     access: 'admin',
     tasks: [
-      { title: 'Setup workspace', completed: true },
-      { title: 'Change estimate', completed: false },
-      { title: 'Develop new widget', completed: true },
+      { title: 'Setup workspace', completed: true, key: uuidV4() },
+      { title: 'Change estimate', completed: false, key: uuidV4() },
+      { title: 'Develop new widget', completed: true, key: uuidV4() },
     ],
   },
   {
@@ -65,9 +67,9 @@ export const mockDataTeam = [
     phone: '(421)445-1189',
     access: 'user',
     tasks: [
-      { title: 'Setup workspace', completed: true },
-      { title: 'Change estimate', completed: false },
-      { title: 'Develop new widget', completed: true },
+      { title: 'Setup workspace', completed: true, key: uuidV4() },
+      { title: 'Change estimate', completed: false, key: uuidV4() },
+      { title: 'Develop new widget', completed: true, key: uuidV4() },
     ],
   },
   {
@@ -78,9 +80,9 @@ export const mockDataTeam = [
     phone: '(232)545-6483',
     access: 'manager',
     tasks: [
-      { title: 'Setup workspace', completed: true },
-      { title: 'Change estimate', completed: false },
-      { title: 'Develop new widget', completed: true },
+      { title: 'Setup workspace', completed: true, key: uuidV4() },
+      { title: 'Change estimate', completed: false, key: uuidV4() },
+      { title: 'Develop new widget', completed: true, key: uuidV4() },
     ],
   },
   {
@@ -91,9 +93,9 @@ export const mockDataTeam = [
     phone: '(543)124-0123',
     access: 'user',
     tasks: [
-      { title: 'Setup workspace', completed: true },
-      { title: 'Change estimate', completed: false },
-      { title: 'Develop new widget', completed: true },
+      { title: 'Setup workspace', completed: true, key: uuidV4() },
+      { title: 'Change estimate', completed: false, key: uuidV4() },
+      { title: 'Develop new widget', completed: true, key: uuidV4() },
     ],
   },
   {
@@ -104,9 +106,9 @@ export const mockDataTeam = [
     phone: '(222)444-5555',
     access: 'user',
     tasks: [
-      { title: 'Setup workspace', completed: true },
-      { title: 'Change estimate', completed: false },
-      { title: 'Develop new widget', completed: true },
+      { title: 'Setup workspace', completed: true, key: uuidV4() },
+      { title: 'Change estimate', completed: false, key: uuidV4() },
+      { title: 'Develop new widget', completed: true, key: uuidV4() },
     ],
   },
   {
@@ -117,120 +119,9 @@ export const mockDataTeam = [
     phone: '(444)555-6239',
     access: 'admin',
     tasks: [
-      { title: 'Setup workspace', completed: true },
-      { title: 'Change estimate', completed: false },
-      { title: 'Develop new widget', completed: true },
+      { title: 'Setup workspace', completed: true, key: uuidV4() },
+      { title: 'Change estimate', completed: false, key: uuidV4() },
+      { title: 'Develop new widget', completed: true, key: uuidV4() },
     ],
-  },
-];
-
-export const languageStats = [
-  {
-    id: 'hack',
-    label: 'hack',
-    value: 570,
-    color: 'hsl(331, 70%, 50%)',
-  },
-  {
-    id: 'sass',
-    label: 'sass',
-    value: 384,
-    color: 'hsl(350, 70%, 50%)',
-  },
-  {
-    id: 'stylus',
-    label: 'stylus',
-    value: 558,
-    color: 'hsl(332, 70%, 50%)',
-  },
-  {
-    id: 'lisp',
-    label: 'lisp',
-    value: 219,
-    color: 'hsl(43, 70%, 50%)',
-  },
-  {
-    id: 'javascript',
-    label: 'javascript',
-    value: 207,
-    color: 'hsl(162, 70%, 50%)',
-  },
-  {
-    id: 'php',
-    label: 'php',
-    value: 464,
-    color: 'hsl(133, 70%, 50%)',
-  },
-  {
-    id: 'elixir',
-    label: 'elixir',
-    value: 479,
-    color: 'hsl(319, 70%, 50%)',
-  },
-  {
-    id: 'rust',
-    label: 'rust',
-    value: 457,
-    color: 'hsl(270, 70%, 50%)',
-  },
-  {
-    id: 'make',
-    label: 'make',
-    value: 570,
-    color: 'hsl(136, 70%, 50%)',
-  },
-  {
-    id: 'c',
-    label: 'c',
-    value: 56,
-    color: 'hsl(349, 70%, 50%)',
-  },
-  {
-    id: 'python',
-    label: 'python',
-    value: 591,
-    color: 'hsl(62, 70%, 50%)',
-  },
-  {
-    id: 'go',
-    label: 'go',
-    value: 137,
-    color: 'hsl(154, 70%, 50%)',
-  },
-  {
-    id: 'haskell',
-    label: 'haskell',
-    value: 365,
-    color: 'hsl(237, 70%, 50%)',
-  },
-  {
-    id: 'erlang',
-    label: 'erlang',
-    value: 165,
-    color: 'hsl(117, 70%, 50%)',
-  },
-  {
-    id: 'ruby',
-    label: 'ruby',
-    value: 413,
-    color: 'hsl(176, 70%, 50%)',
-  },
-  {
-    id: 'java',
-    label: 'java',
-    value: 325,
-    color: 'hsl(239, 70%, 50%)',
-  },
-  {
-    id: 'scala',
-    label: 'scala',
-    value: 127,
-    color: 'hsl(80, 70%, 50%)',
-  },
-  {
-    id: 'css',
-    label: 'css',
-    value: 135,
-    color: 'hsl(44, 70%, 50%)',
   },
 ];

@@ -5,6 +5,16 @@ const actionTypes = {
   clearValues: 'CLEAR VALUES',
 };
 
+export const initialFormState = {
+  id: '',
+  name: '',
+  age: '',
+  phone: '',
+  email: '',
+  access: '',
+  tasks: [],
+};
+
 const reducer = (state, action) => {
   switch (action.type) {
     case actionTypes.inputChange:

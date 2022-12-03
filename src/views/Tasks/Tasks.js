@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Scrollbars } from 'react-custom-scrollbars-2';
+import { v4 as uuidV4 } from 'uuid';
 import { mockDataTeam } from '../../data/mockData';
 import TasksListItem from '../../components/molecules/TasksListItem/TaskListItem';
 
@@ -16,7 +17,7 @@ function Tasks() {
     <Scrollbars>
       <TasksList>
         {mockDataTeam.map((user) => {
-          return <TasksListItem user={user} />;
+          return <TasksListItem user={user} key={uuidV4()} />;
         })}
       </TasksList>
     </Scrollbars>
